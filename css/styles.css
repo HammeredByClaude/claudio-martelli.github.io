@@ -103,9 +103,6 @@ i.material-icons {
   background-color: #777;
 }
 
-/*===========================================
-Text Styles CSS
-============================================*/
 .t-title-size{
   font-size: 18px;
 }
@@ -122,11 +119,6 @@ Text Styles CSS
   text-align: right;
 }
 
-
-
-/*===========================================
-Padding & Margins CSS
-============================================*/
 .p-5{
   padding: 5px;
 }
@@ -226,19 +218,15 @@ Padding & Margins CSS
 .m-50{
   margin: 50px;
 }
-
-/*===========================================
-Display Styles
-============================================*/
 .d-flex{
   display: flex;
 }
 .d-flex-align-center {
-    display: flex !important;    /* La magia che li mette in riga */
-    align-items: center;         /* Li centra verticalmente */
-    justify-content: center;     /* Li centra orizzontalmente */
-    width: 100%;                 /* Occupa tutto lo spazio */
-    gap: 40px;                   /* Spazio tra foto e testo */
+    display: flex !important;   
+    align-items: center;         
+    justify-content: center;     
+    width: 100%;                 
+    gap: 40px;                   
 }
 .d-flex-align-center-column{
   display: flex;
@@ -252,11 +240,6 @@ Display Styles
   flex: 2;
 }
 
-
-
-/*===========================================
-Page Styles
-============================================*/
 
 .wraper {
     width: 100%;
@@ -323,7 +306,6 @@ Page Styles
 
 .nav {
     flex: 1;
-    /* display: flex; */
     justify-content: flex-end;
     margin: 50px 0px;
 }
@@ -549,33 +531,28 @@ Page Styles
 skill-column:not(:last-child)::after {
     content: "";
     position: absolute;
-    z-index: 99; /* Il filo sta sotto la puntina */
+    z-index: 99; 
     
-    /* Posizionamento: Parte dal centro della scheda corrente */
+ 
     top: -5px; 
     left: 50%;
-    
-    /* Larghezza: deve arrivare al centro della scheda successiva.
-       Calcolo: 100% (larghezza scheda) + 20px (il gap tra le colonne) */
+  
     width: calc(100% + 20px); 
-    height: 40px; /* Altezza dell'arco */
+    height: 40px; 
     
-    /* Creiamo l'effetto filo appeso usando il bordo inferiore curvo */
-    border-bottom: 3px solid #d02e2e; /* Filo rosso */
-    border-radius: 0 0 100% 100%; /* Curva il bordo */
     
-    /* Disabilita click sul filo */
+    border-bottom: 3px solid #d02e2e; 
+    border-radius: 0 0 100% 100%; 
+    
+  
     pointer-events: none;
     
-    /* Opzionale: leggera ombra sotto il filo per realismo */
     filter: drop-shadow(0px 2px 1px rgba(0,0,0,0.1));
 }
 
-/* MOBILE FIX: Nascondere il filo su schermi piccoli */
-/* Su mobile le card sono una sotto l'altra, quindi il filo orizzontale non ha senso */
 @media (max-width: 768px) {
     .skill-column:not(:last-child)::after {
-        display: none; /* Nasconde il filo */
+        display: none; 
     }
 }
 
@@ -641,16 +618,16 @@ skill-column:not(:last-child)::after {
   position: relative; 
     overflow: visible;
     max-width: 1200px;
-    margin: 40px auto;      /* Spazio sopra e sotto */
-    background-color: #ffffff; /* Sfondo bianco per staccare dal resto della pagina */
-    padding: 40px;          /* Spaziatura interna abbondante per eleganza */
-    border-radius: 12px;    /* Bordi arrotondati */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Ombra molto morbida e diffusa */
-    text-align: justify;    /* Testo giustificato */
+    margin: 40px auto;      
+    background-color: #ffffff; 
+    padding: 40px;          
+    border-radius: 12px;   
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    text-align: justify;   
     font-family: 'Arial', sans-serif;
-    line-height: 1.8;       /* Interlinea maggiore per migliore leggibilità */
-    color: #444;            /* Grigio scuro, più morbido del nero assoluto */
-    border: 1px solid rgba(0,0,0,0.02); /* Bordo quasi invisibile per definizione */
+    line-height: 1.8;      
+    color: #444;           
+    border: 1px solid rgba(0,0,0,0.02); 
 }
 
 .profile-intro h2 {
@@ -659,51 +636,50 @@ skill-column:not(:last-child)::after {
     margin-bottom: 25px;
     font-size: 2rem;
     color: #222;
-    text-transform: uppercase; /* Opzionale: rende il titolo più autorevole */
-    letter-spacing: 1px;       /* Spazia leggermente le lettere del titolo */
+    text-transform: uppercase; 
+    letter-spacing: 1px;      
     position: relative;
 }
 
-/* Opzionale: Aggiunge una piccola linea decorativa sotto il titolo */
+
 .profile-intro h2::after {
     content: "";
     display: block;
     width: 60px;
     height: 3px;
-    background-color: #d44b4b; /* Stesso colore blu usato nelle skills */
+    background-color: #d44b4b; 
     margin: 15px auto 0 auto;
 }
 .profile-intro::before {
     content: "";
     position: absolute;
-    top: -12px;           /* Posizione sopra il bordo */
-    left: 50%;            /* Centrato orizzontalmente */
+    top: -12px;           
+    left: 50%;            
     transform: translateX(-50%);
     width: 20px;
     height: 20px;
-    border-radius: 50%;   /* Cerchio */
+    border-radius: 50%;   
     
-    /* Colore e effetto 3D (sfumatura radiale) */
     background: radial-gradient(circle at 30% 30%, #ff5f5f, #d02e2e);
     border: 1px solid #992222;
     
-    /* Ombra per dare profondità */
+
     box-shadow: 2px 4px 6px rgba(0,0,0,0.3);
     z-index: 10;
 }
-/* Il foglio di carta */
+
 .classified-paper {
-    background-color: #f4f1ea; /* Colore carta vecchia */
+    background-color: #f4f1ea; 
     color: #111;
-    font-family: 'Courier New', Courier, monospace; /* Font macchina da scrivere */
+    font-family: 'Courier New', Courier, monospace; 
     padding: 40px;
     max-width: 600px;
     margin: 50px auto;
     border: 1px solid #d3d3d3;
     box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
     position: relative;
-    cursor: pointer; /* Cambia il cursore per far capire che è cliccabile */
-    transform: rotate(-1deg); /* Leggera rotazione per realismo */
+    cursor: pointer; 
+    transform: rotate(-1deg); 
     transition: transform 0.3s ease;
 }
 
@@ -711,7 +687,7 @@ skill-column:not(:last-child)::after {
     transform: rotate(0deg) scale(1.02);
 }
 
-/* Il Timbro Rosso */
+
 .stamp {
     position: absolute;
     top: 20px;
@@ -724,41 +700,40 @@ skill-column:not(:last-child)::after {
     text-transform: uppercase;
     opacity: 0.7;
     transform: rotate(15deg);
-    mask-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/8399/grunge.png'); /* Opzionale: effetto grunge */
+    mask-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/8399/grunge.png'); 
     -webkit-mask-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/8399/grunge.png');
 }
 
 .doc-content {
-    line-height: 2.2; /* Spaziatura ampia tra le righe */
+    line-height: 2.2; 
     font-size: 16px;
     font-weight: 600;
 }
 
-/* Stile per il testo CENSURATO (Sempre nero) */
+
 .censored {
-    background-color: #111; /* Sfondo nero */
-    color: transparent;     /* Testo trasparente */
+    background-color: #111; 
+    color: transparent;     
     padding: 2px 5px;
-    user-select: none;      /* Impedisce di selezionare il testo per leggerlo */
+    user-select: none;      
 }
 
-/* Stile per il MESSAGGIO SEGRETO (Inizialmente censurato) */
 .secret-message {
     background-color: #111;
     color: transparent;
     padding: 2px 5px;
-    transition: all 0.5s ease-in-out; /* Animazione fluida */
+    transition: all 0.5s ease-in-out; 
 }
 
-/* CLASSE ATTIVA: Quando il documento viene cliccato */
+
 .classified-paper.revealed .secret-message {
-    background-color: transparent; /* Toglie lo sfondo nero */
-    color: #d44b4b; /* Testo rosso per evidenziarlo (o usa #000 per nero) */
+    background-color: transparent; 
+    color: #d44b4b; 
     font-weight: bold;
     text-decoration: underline;
 }
 
-/* Piccolo suggerimento in basso */
+
 .instruction-hint {
     margin-top: 30px;
     font-size: 10px;
@@ -767,63 +742,62 @@ skill-column:not(:last-child)::after {
     text-transform: uppercase;
     letter-spacing: 2px;
 }
-/* Contenitore della foto stile "Prova Investigativa" */
+
 .evidence-photo {
     position: relative;
-    display: inline-block; /* Si adatta alla dimensione dell'immagine */
+    display: inline-block;
     margin: 20px;
-    transform: rotate(-2deg); /* Leggera rotazione per sembrare appoggiata */
+    transform: rotate(-2deg); 
     transition: transform 0.3s ease;
-    box-shadow: 5px 10px 20px rgba(0,0,0,0.15); /* Ombra realistica */
-    background-color: #fff; /* Sfondo bianco per il bordo */
-    padding: 10px 10px 40px 10px; /* Bordo bianco: più spesso sotto (effetto Polaroid) */
+    box-shadow: 5px 10px 20px rgba(0,0,0,0.15);
+    background-color: #fff; 
+    padding: 10px 10px 40px 10px; 
    
 }
 
-/* Effetto Hover: quando passi il mouse si raddrizza */
 .evidence-photo:hover {
     transform: rotate(0deg) scale(1.02);
     box-shadow: 0 15px 30px rgba(0,0,0,0.2);
     z-index: 10;
 }
 
-/* Stile dell'immagine vera e propria */
+
 .evidence-photo img {
     display: block;
     max-width:100%;
     height: auto;
-    filter: sepia(20%) contrast(1.1); /* Opzionale: dà un tono leggermente "documentale" */
-    border: 1px solid #ddd; /* Sottile bordo grigio interno */
+    filter: sepia(20%) contrast(1.1); 
+    border: 1px solid #ddd;
 }
 
-/* IL NASTRO ADESIVO (Finto scotch creato con CSS) */
+
 .evidence-photo::before {
     content: "";
     position: absolute;
-    top: -15px;     /* Posizione in alto */
-    left: 50%;      /* Centrato orizzontalmente */
-    transform: translateX(-50%) rotate(2deg); /* Centrato e leggermente storto */
+    top: -15px;    
+    left: 50%;      
+    transform: translateX(-50%) rotate(2deg); 
     
-    width: 120px;   /* Larghezza dello scotch */
-    height: 35px;   /* Altezza dello scotch */
+    width: 120px;   
+    height: 35px;   
     
-    background-color: rgba(255, 255, 255, 0.6); /* Colore bianco semi-trasparente */
-    border-left: 2px dotted rgba(255,255,255,0.3); /* Bordi frastagliati */
+    background-color: rgba(255, 255, 255, 0.6); 
+    border-left: 2px dotted rgba(255,255,255,0.3); 
     border-right: 2px dotted rgba(255,255,255,0.3);
     
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Ombra leggera sotto lo scotch */
-    backdrop-filter: blur(2px); /* Opzionale: sfoca leggermente quello che c'è sotto */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+    backdrop-filter: blur(2px); 
     z-index: 5;
 }
 
-/* Testo didascalia (stile macchina da scrivere) */
+
 .photo-caption {
     position: absolute;
     bottom: 10px;
     left: 0;
     width: 100%;
     text-align: center;
-    font-family: 'Courier New', Courier, monospace; /* Font macchina da scrivere */
+    font-family: 'Courier New', Courier, monospace; 
     font-size: 14px;
     color: #333;
     font-weight: bold;
@@ -831,13 +805,13 @@ skill-column:not(:last-child)::after {
     opacity: 0.8;
 }
 .user-img {
-    flex: 0 0 350px !important; /* Smette di crescere e fissa la base a 350px */
-    max-width: 350px !important; /* Impedisce che diventi più largo di così */
+    flex: 0 0 350px !important; 
+    max-width: 350px !important; 
 }
 .user-profile {
-    flex: 1 !important;       /* Occupa solo lo spazio che avanza, non tutto */
-    min-width: 0 !important;  /* FONDAMENTALE: permette al box di restringersi se non c'è spazio */
-    max-width: 600px !important; /* Opzionale: blocca la larghezza massima per tenerlo compatto */
+    flex: 1 !important;       
+    min-width: 0 !important; 
+    max-width: 600px !important; 
 }
 @media (max-width: 991px) {
     .d-flex-align-center {
@@ -846,62 +820,60 @@ skill-column:not(:last-child)::after {
 }
 .d-flex-align-left {
     display: flex !important;
-    flex-direction: column; /* Mette i contenuti in colonna per facilitare la lettura */
+    flex-direction: column; 
     width: 100%;
     height: 100%;
-    align-items: center; /* Centra il contenuto orizzontalmente */
-    justify-content: flex-start; /* Parte dall'alto */
-    overflow-y: auto; /* Permette lo scroll se il testo è lungo */
+    align-items: center; 
+    justify-content: flex-start; 
+    overflow-y: auto; 
 }
 #About .user-profile {
-    max-width: 100% !important;  /* Annulla il limite di 600px solo qui */
-    width: 100%;                 /* Occupa tutto lo spazio disponibile */
-    padding-right: 20px;         /* Un po' di margine destro per sicurezza */
+    max-width: 100% !important;  
+    width: 100%;                 
+    padding-right: 20px;         
 }
 
-/* Assicuriamoci che il contenitore padre non stringa troppo */
 #About .d-flex-align-left {
-    align-items: stretch !important; /* Occupa tutta la larghezza invece di centrare */
+    align-items: stretch !important; 
 }
 .services-grid {
     display: flex;
-    flex-wrap: wrap;        /* Permette di andare a capo */
-    justify-content: center; /* Centra tutto */
-    gap: 40px;              /* Spazio tra i fogli */
+    flex-wrap: wrap;      
+    justify-content: center; 
+    gap: 40px;            
     padding-bottom: 50px;
-    max-width: 1200px;      /* Larghezza massima per non disperderli su schermi enormi */
+    max-width: 1200px;      
     margin: 0 auto;
 }
 
-/* Il singolo foglietto/card */
+
 .service-card {
-    background-color: #fff;       /* Carta bianca */
-    width: 30%;                   /* 30% circa per averne 3 per riga */
-    min-width: 280px;             /* Non diventa mai troppo piccolo */
-    padding: 30px 20px 40px 20px; /* Padding interno, più alto sotto (effetto polaroid) */
-    box-shadow: 5px 10px 20px rgba(0,0,0,0.1); /* Ombra per profondità */
-    position: relative;           /* Serve per posizionare lo scotch */
+    background-color: #fff;       
+    width: 30%;                  
+    min-width: 280px;           
+    padding: 30px 20px 40px 20px; 
+    box-shadow: 5px 10px 20px rgba(0,0,0,0.1); 
+    position: relative;           
     transition: all 0.3s ease;
-    border: 1px solid #eee;       /* Bordo sottile */
-    text-align: center;           /* Testo centrato */
+    border: 1px solid #eee;
+    text-align: center;  
 }
 
-/* Effetto Hover: quando passi il mouse */
+
 .service-card:hover {
-    transform: scale(1.05) rotate(0deg) !important; /* Si ingrandisce e raddrizza */
+    transform: scale(1.05) rotate(0deg) !important; 
     z-index: 10;
     box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
 
-/* Tipografia dentro i box */
 .service-card h3 {
-    font-family: 'Courier New', Courier, monospace; /* Font "Dossier" */
+    font-family: 'Courier New', Courier, monospace; 
     font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 15px;
     text-transform: uppercase;
     color: #222;
-    border-bottom: 2px solid #d44b4b; /* Sottolineatura rossa stile evidenziatore */
+    border-bottom: 2px solid #d44b4b; 
     display: inline-block;
     padding-bottom: 5px;
 }
@@ -912,13 +884,12 @@ skill-column:not(:last-child)::after {
     line-height: 1.6;
 }
 
-/* LO SCOTCH (TAPE) */
-/* Ricreato uguale alla tua foto profilo ma come classe separata */
+
 .service-card .tape {
     position: absolute;
     top: -15px;
     left: 50%;
-    transform: translateX(-50%) rotate(1deg); /* Leggermente storto */
+    transform: translateX(-50%) rotate(1deg); 
     width: 100px;
     height: 30px;
     background-color: rgba(255, 255, 255, 0.6);
@@ -928,83 +899,81 @@ skill-column:not(:last-child)::after {
     backdrop-filter: blur(2px);
 }
 
-/* EFFETTO "DISORDINATO" (Rotazioni alternate) */
-/* Ruota i box in modo diverso per sembrare attaccati a mano */
+
 
 .service-card:nth-child(odd) {
-    transform: rotate(-2deg); /* I dispari ruotano a sinistra */
+    transform: rotate(-2deg); 
 }
 
 .service-card:nth-child(even) {
-    transform: rotate(2deg); /* I pari ruotano a destra */
-    margin-top: 10px;        /* Li sfasa leggermente verticalmente */
+    transform: rotate(2deg);
+    margin-top: 10px;       
 }
 
-/* MEDIA QUERY: Adattamento Mobile */
+
 @media (max-width: 900px) {
     .service-card {
-        width: 45%; /* 2 per riga su tablet */
+        width: 45%; 
     }
 }
 
 @media (max-width: 600px) {
     .service-card {
-        width: 100%; /* 1 per riga su cellulare */
-        transform: rotate(0deg) !important; /* Toglie la rotazione su mobile per ordine */
+        width: 100%; 
+        transform: rotate(0deg) !important; 
         margin-top: 0;
     }
 }
 .portfolio-desk {
     display: flex;
     justify-content: center;
-    gap: 30px;              /* Spazio tra i fascicoli */
+    gap: 30px;              
     padding: 20px 0 60px 0;
     max-width: 100%;
-    flex-wrap: wrap;        /* Fondamentale per il mobile */
+    flex-wrap: wrap;       
 }
 
-/* La scheda base (Il fascicolo) */
 .dossier-file {
     position: relative;
-    width: 22%;             /* 4 schede in una riga (100% / 4 = 25% - margini) */
-    min-width: 200px;       /* Non diventano mai troppo piccole */
+    width: 22%;            
+    min-width: 200px;      
     background-color: #fff;
     padding: 30px 20px;
     text-align: center;
-    text-decoration: none;  /* Toglie la sottolineatura dei link */
+    text-decoration: none;  
     color: #333;
     border: 1px solid #ddd;
     transition: transform 0.3s ease;
     cursor: pointer;
     
-    /* EFFETTO PILA DI FOGLI (Ombre multiple sfalsate) */
+    
     box-shadow: 
         1px 1px 0 #ccc,
         2px 2px 0 #fff,
         3px 3px 0 #ccc,
         4px 4px 0 #fff,
         5px 5px 0 #ccc,
-        0 10px 20px rgba(0,0,0,0.15); /* Ombra reale finale */
+        0 10px 20px rgba(0,0,0,0.15); 
 }
 
-/* Rotazioni casuali per sembrare disordinati */
+
 .dossier-file:nth-child(1) { transform: rotate(-2deg); }
-.dossier-file:nth-child(2) { transform: rotate(1deg); margin-top: 15px; } /* Sfalsato in basso */
+.dossier-file:nth-child(2) { transform: rotate(1deg); margin-top: 15px; } 
 .dossier-file:nth-child(3) { transform: rotate(-1deg); }
 .dossier-file:nth-child(4) { transform: rotate(2deg); margin-top: 10px; }
 
-/* Effetto Hover (Sollevamento) */
+
 .dossier-file:not(.classified-file):hover {
-    transform: scale(1.05) translateY(-10px) rotate(0deg); /* Si raddrizza e si alza */
+    transform: scale(1.05) translateY(-10px) rotate(0deg); 
     z-index: 10;
     box-shadow: 
         1px 1px 0 #ccc,
-        /* ... mantiene la pila ... */
+        
         5px 5px 0 #ccc,
-        0 25px 40px rgba(0,0,0,0.2); /* Ombra più profonda */
+        0 25px 40px rgba(0,0,0,0.2); 
 }
 
-/* Icona e Testo */
+
 .file-icon {
     font-size: 40px;
     color: #444;
@@ -1029,31 +998,29 @@ skill-column:not(:last-child)::after {
     margin-bottom: 20px;
 }
 
-/* Bottone finto "Esamina" */
+
 .view-btn {
     font-size: 0.8rem;
     font-weight: bold;
-    color: #d02e2e; /* Rosso investigativo */
+    color: #d02e2e; 
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-/* ===========================================
-   STILE SPECIALE: CLASSIFIED (4° Scheda)
-=========================================== */
+
 
 .classified-file {
-    background-color: #f4f4f4; /* Carta leggermente più scura */
-    cursor: not-allowed;       /* Cursore di divieto */
+    background-color: #f4f4f4; 
+    cursor: not-allowed;       
     opacity: 0.9;
 }
 
 .classified-file:hover {
-    transform: none;           /* Non si muove al passaggio del mouse */
-    box-shadow: inherit;       /* Niente ombra extra */
+    transform: none;           
+    box-shadow: inherit;      
 }
 
-/* Il Timbro TOP SECRET */
+
 .top-secret-stamp {
     position: absolute;
     top: 50%;
@@ -1065,17 +1032,17 @@ skill-column:not(:last-child)::after {
     font-weight: bold;
     padding: 10px 5px;
     text-transform: uppercase;
-    opacity: 0.3; /* Semitrasparente sopra il testo */
+    opacity: 0.3;
     pointer-events: none;
     white-space: nowrap;
     z-index: 5;
     font-family: 'Arial Black', sans-serif;
     letter-spacing: 3px;
-    mask-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/8399/grunge.png'); /* Opzionale */
+    mask-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/8399/grunge.png'); 
     -webkit-mask-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/8399/grunge.png');
 }
 
-/* Testo censurato (barre nere) */
+
 .black-bar {
     background-color: #222;
     color: transparent;
@@ -1092,28 +1059,26 @@ skill-column:not(:last-child)::after {
     padding: 2px 5px;
 }
 
-/* MEDIA QUERY: Adattamento Mobile */
+
 @media (max-width: 1000px) {
     .dossier-file {
-        width: 45%; /* Su tablet diventano 2 per riga */
+        width: 45%; 
     }
 }
 
 @media (max-width: 600px) {
     .dossier-file {
-        width: 100%; /* Su cellulare una sotto l'altra */
+        width: 100%; 
         transform: rotate(0deg) !important;
         margin-top: 20px !important;
     }
 }
-/* ===========================================
-   STILE EDUCATION (Documenti A4)
-=========================================== */
+
 
 .education-desk {
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Allinea in alto */
+    align-items: flex-start; 
     gap: 40px;
     padding-bottom: 50px;
     flex-wrap: wrap;
@@ -1121,19 +1086,19 @@ skill-column:not(:last-child)::after {
     margin: 0 auto;
 }
 
-/* Il foglio A4 */
+
 .a4-paper {
-    background-color: #fffdf7; /* Bianco carta leggermente avorio */
-    width: 28%;                /* Stretti per starne 3 in fila */
+    background-color: #fffdf7; 
+    width: 28%;            
     min-width: 300px;
-    min-height: 500px;         /* Altezza fissa per sembrare un A4 */
-    padding: 50px 25px 30px 25px; /* Padding alto per la graffetta */
+    min-height: 500px;         
+    padding: 50px 25px 30px 25px; 
     position: relative;
     border: 1px solid #dcdcdc;
-    text-align: left;          /* Testo allineato a sinistra come un documento */
+    text-align: left;        
     transition: transform 0.3s ease;
     
-    /* Effetto Pila di Carta (Multipli bordi sotto) */
+   
     box-shadow: 
         1px 1px 0 #e0e0e0,
         2px 2px 0 #fff,
@@ -1143,19 +1108,19 @@ skill-column:not(:last-child)::after {
         0 10px 20px rgba(0,0,0,0.1);
 }
 
-/* Rotazioni leggere */
+
 .a4-paper:nth-child(1) { transform: rotate(-1deg); }
 .a4-paper:nth-child(2) { transform: rotate(1deg); margin-top: 10px; }
 .a4-paper:nth-child(3) { transform: rotate(-0.5deg); }
 
-/* Hover: si solleva per leggere meglio */
+
 .a4-paper:hover {
     transform: scale(1.02) translateY(-10px) rotate(0deg);
     z-index: 10;
     box-shadow: 0 20px 40px rgba(0,0,0,0.2);
 }
 
-/* LA GRAFFETTA (Paperclip) fatta con CSS */
+
 .paper-clip {
     position: absolute;
     top: -10px;
@@ -1163,8 +1128,8 @@ skill-column:not(:last-child)::after {
     width: 20px;
     height: 45px;
     border-radius: 10px;
-    border: 3px solid #888; /* Colore metallo */
-    border-bottom: none;    /* Aperta sotto */
+    border: 3px solid #888;
+    border-bottom: none;    
     z-index: 5;
     background: transparent;
     box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
@@ -1183,7 +1148,7 @@ skill-column:not(:last-child)::after {
     z-index: 4;
 }
 
-/* Tipografia del Documento */
+
 .doc-header {
     border-bottom: 2px solid #222;
     padding-bottom: 10px;
@@ -1206,7 +1171,7 @@ skill-column:not(:last-child)::after {
 }
 
 .doc-title {
-    font-family: 'Times New Roman', Times, serif; /* Font accademico */
+    font-family: 'Times New Roman', Times, serif; 
     font-size: 1.4rem;
     color: #111;
     margin-bottom: 15px;
@@ -1223,31 +1188,30 @@ skill-column:not(:last-child)::after {
     color: #000;
 }
 
-/* Lista esami/materie */
+
 .course-list {
     margin-top: 10px;
     padding-left: 15px;
-    list-style-type: disc; /* Pallini classici */
+    list-style-type: disc; 
 }
 
 .course-list li {
     margin-bottom: 5px;
-    /* Sovrascriviamo lo stile flex che avevamo messo per le skills */
     display: list-item; 
     justify-content: flex-start;
     border-bottom: none;
 }
 
-/* Footer col Timbro */
+
 .doc-footer {
     margin-top: 30px;
     text-align: right;
 }
 
-/* Timbro "GRADUATED" */
+
 .stamp-approved {
     display: inline-block;
-    border: 3px solid #0a8a0a; /* Verde */
+    border: 3px solid #0a8a0a;
     color: #0a8a0a;
     font-weight: bold;
     padding: 5px 10px;
@@ -1257,10 +1221,10 @@ skill-column:not(:last-child)::after {
     opacity: 0.8;
 }
 
-/* Timbro "IN PROGRESS" */
+
 .stamp-pending {
     display: inline-block;
-    border: 3px solid #d02e2e; /* Rosso */
+    border: 3px solid #d02e2e; 
     color: #d02e2e;
     font-weight: bold;
     padding: 5px 10px;
@@ -1270,25 +1234,25 @@ skill-column:not(:last-child)::after {
     opacity: 0.8;
 }
 
-/* Mobile Adjustments */
+
 @media (max-width: 900px) {
     .a4-paper {
         width: 100%;
         margin-bottom: 30px;
         transform: rotate(0deg) !important;
         margin-top: 0 !important;
-        min-height: auto; /* Altezza automatica su mobile */
+        min-height: auto; 
     }
 }
 .left-footer .social-icons ul {
-    justify-content: center; /* Centra le icone orizzontalmente */
-    gap: 15px; /* Spazio tra le icone */
+    justify-content: right; /
+    gap: 15px; 
 }
 
-/* Stile per l'email nel footer */
+
 .foot-contact ul li a {
-    font-size: 13px; /* Riduce leggermente il font per farla entrare */
-    word-break: break-all; /* Se è troppo lunga, va a capo invece di uscire fuori */
+    font-size: 13px; 
+    word-break: break-all; 
     color: rgba(0, 0, 0, 0.7);
     transition: color 0.3s;
 }
@@ -1298,9 +1262,9 @@ skill-column:not(:last-child)::after {
     text-decoration: underline;
 }
 
-/* Spaziatura generale footer */
+
 .left-footer {
-    text-align: center; /* Centra tutto il contenuto del footer */
+    text-align: center;
     padding-bottom: 20px;
 }
 .skill-column {
@@ -1308,72 +1272,68 @@ skill-column:not(:last-child)::after {
     position: relative;
 }
 
-/* 2. TRUCCO MAGICO: Invertiamo l'ordine di sovrapposizione (Stacking Order) */
-/* Facciamo sì che la scheda di sinistra stia fisicamente SOPRA quella di destra */
+
 .skill-column:nth-child(1) { z-index: 10; }
 .skill-column:nth-child(2) { z-index: 9; }
 .skill-column:nth-child(3) { z-index: 8; }
 .skill-column:nth-child(4) { z-index: 7; }
 
-/* 3. Disegno del filo (rinforzato) */
+
 .skill-column:not(:last-child)::after {
     content: "";
     position: absolute;
     
-    /* Posizione */
+
     top: -25px;
     left: 50%;
     
-    /* Dimensioni: copre la scheda + lo spazio (gap) di 20px */
+
     width: calc(100% + 20px); 
     height: 35px;
     
-    /* Stile linea */
-    border-bottom: 3px solid #d02e2e; /* Rosso vivo */
-    border-radius: 0 0 50% 50%;       /* Curva a pancia */
+    border-bottom: 3px solid #d02e2e; 
+    border-radius: 0 0 50% 50%;      
     
     pointer-events: none;
-    z-index: 1; /* Sta sopra alla propria scheda */
+    z-index: 1; 
 }
 
-/* Nascondi su mobile (perché le schede vanno a capo) */
+
 @media (max-width: 1510px) {
     .skill-column:not(:last-child)::after {
         display: none;
     }
 }
 .investigation-board {
-    /* Sfondo effetto Sughero */
+    
     background-color: #e3d5b8; 
-    background-image: radial-gradient(#d0c0a0 2px, transparent 2px); /* Puntini per texture */
-    background-size: 20px 20px; /* Dimensione pattern */
+    background-image: radial-gradient(#d0c0a0 2px, transparent 2px); 
+    background-size: 20px 20px; 
     
-    /* Cornice in legno */
-    border: 15px solid #654321; /* Marrone scuro */
-    border-radius: 5px; /* Angoli leggermente smussati */
+    border: 15px solid #654321;
+    border-radius: 5px; 
     
-    /* Ombre per profondità */
+    
     box-shadow: 
-        inset 0 0 20px rgba(0,0,0,0.5), /* Ombra interna (dentro la cornice) */
-        0 10px 20px rgba(0,0,0,0.2);    /* Ombra esterna (la bacheca stacca dal muro) */
+        inset 0 0 20px rgba(0,0,0,0.5), 
+        0 10px 20px rgba(0,0,0,0.2);    
     
-    /* Spaziatura */
-    padding: 40 px;      /* Spazio interno: i fogli non toccano la cornice */
-   margin: -20px auto 40px auto /* Centrato */
+
+    padding: 40 px;      
+   margin: -20px auto 40px auto 
     max-width: 1300px;
     
     position: relative;
     z-index: 0;
 }
 
-/* Modifica per Skills Container: Rimuoviamo il limite larghezza
-   perché ora ci pensa la bacheca a contenerli */
+
 .skills-container {
     max-width: 100% !important; 
     margin: 0 !important;
 }
 
-/* Mobile: Riduciamo la cornice su schermi piccoli */
+
 @media (max-width: 768px) {
     .investigation-board {
         padding: 15px;
