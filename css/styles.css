@@ -254,7 +254,7 @@ i.material-icons {
 }
 
 .left-content {
-    width: 300px;
+    width: 240px;
     overflow-y: auto;
     height: 100%;
     background: #FAF3E1;
@@ -1326,13 +1326,6 @@ skill-column:not(:last-child)::after {
     position: relative;
     z-index: 0;
 }
-
-
-.skills-container {
-    max-width: 100% !important; 
-    margin: 0 !important;
-}
-
 
 @media (max-width: 768px) {
     .investigation-board {
