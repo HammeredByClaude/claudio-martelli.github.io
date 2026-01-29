@@ -1334,4 +1334,12 @@ skill-column:not(:last-child)::after {
         border-width: 8px;
     }
 }
-
+@media (max-width: 991px) {
+    .nav ul li a {
+        color: #333 !important;
+        font-weight: bold;
+    }
+    .nav ul li {
+        margin: 5px 0;
+    }
+}
